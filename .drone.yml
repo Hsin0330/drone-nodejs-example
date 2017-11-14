@@ -13,13 +13,15 @@ pipeline:
     group: testing
     commands:
       - yarn run test
+    environment:
+      - PORT=9000
 
   lint:
     image: node:8.6.0
     group: testing
     commands:
       - yarn run lint
-      
+
 #   restore-cache:
 #     image: drillster/drone-volume-cache
 #     restore: true
